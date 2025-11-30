@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Produções de Português e Redação</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Portfólio de Produções</h1>
+            <p>Disciplina de Português e Redação</p>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#"><i class="fas fa-bars"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#sobre"><i class="fas fa-info-circle"></i> Sobre</a>
+                            <a href="#producoes"><i class="fas fa-file-alt"></i> Produções</a>
+                            <a href="#anime"><i class="fas fa-play-circle"></i> Anime Favorito</a>
+                            <a href="#carreira"><i class="fas fa-briefcase"></i> Minha Carreira</a>
+                            <a href="#agradecimentos"><i class="fas fa-heart"></i> Agradecimentos</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Encerramento do Ano Letivo</h2>
+            <p>Uma jornada de aprendizado, criatividade e crescimento através da língua portuguesa</p>
+            <button class="cta-button" id="scroll-to-producoes">Ver Produções</button>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2>Sobre o Portfólio</h2>
+            <div class="sobre-content">
+                <div class="sobre-texto">
+                    <p>Este portfólio reúne as 15 produções desenvolvidas ao longo do ano na disciplina de Português e Redação. Cada trabalho representa uma etapa do nosso aprendizado, desde a compreensão de estruturas gramaticais até a produção de textos criativos e argumentativos.</p>
+                    <p>Através dessas produções, exploramos diferentes gêneros textuais, aprimoramos nossa capacidade de expressão e desenvolvemos um olhar mais crítico sobre a linguagem e suas possibilidades.</p>
+                </div>
+                <div class="sobre-imagem">
+                    <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Livros e materiais de estudo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="producoes" class="producoes">
+        <div class="container">
+            <h2>Nossas Produções</h2>
+            <p class="section-subtitle">15 trabalhos que marcaram nossa trajetória no ano letivo</p>
+            
+            <div class="producoes-grid">
+                <!-- As produções serão carregadas pelo JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="anime" class="anime">
+        <div class="container">
+            <h2>Meu Anime Favorito</h2>
+            <div class="anime-content">
+                <div class="anime-info">
+                    <h3>Jujutsu Kaisen</h3>
+                    <div class="anime-texto">
+                        <p>Jujutsu Kaisen acompanha Yuji Itadori, um estudante que, após ingerir um objeto amaldiçoado, se torna o hospedeiro de Sukuna, o Rei das Maldições. Arrastado para o mundo do jujutsu, ele se torna aluno de Satoru Gojo, o feiticeiro mais poderoso, e se une aos colegas Megumi Fushiguro e Nobara Kugisaki.</p>
+                        <p>A série equilibra sequências de ação coreografadas com precisão e momentos de desenvolvimento pessoal dos personagens. Enquanto enfrentam maldições e lidam com a imprevisibilidade de Sukuna, os jovens feiticeiros precisam confrontar os perigos de seu mundo e os dilemas de sua própria moralidade em um ambiente constantemente ameaçador.</p>
+                    </div>
+                </div>
+                <div class="anime-media">
+                    <div class="media-column">
+                        <div class="image-title">
+                            <h4>Satoro Gojo vs Sukuna</h4>
+                        </div>
+                        <div class="anime-image">
+                            <img src="https://wallpaperaccess.com/full/9765611.jpg" alt="Cena de Jujutsu Kaisen">
+                        </div>
+                    </div>
+                    <div class="media-column">
+                        <div class="video-title">
+                            <h4>Vídeo do TikTok sobre o anime:</h4>
+                        </div>
+                        <div class="video-wrapper">
+                            <video controls autoplay muted>
+                                <source src="satoro gojo.mp4" type="video/mp4">
+                                Seu navegador não suporta vídeos.
+                            </video>
+                        </div>
+                        <p class="video-note">Vídeo incorporado diretamente no site</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="carreira" class="carreira">
+        <div class="container">
+            <h2>Minha Carreira</h2>
+            <div class="carreira-content">
+                <div class="carreira-texto">
+                    <h3>Objetivos Profissionais</h3>
+                    <p>Atualmente, estou focando meus estudos na área de tecnologia e desenvolvimento web. Tenho grande interesse em front-end development e design de interfaces.</p>
+                    <p>Meus planos para o futuro incluem:</p>
+                    <ul>
+                        <li>Concluir o ensino médio com excelência</li>
+                        <li>Ingressar em um curso superior na área de Tecnologia da Informação</li>
+                        <li>Desenvolver habilidades em programação e design</li>
+                        <li>Trabalhar em projetos inovadores que impactem positivamente a sociedade</li>
+                    </ul>
+                    <div class="habilidades">
+                        <h4>Habilidades em Desenvolvimento</h4>
+                        <div class="habilidades-list">
+                            <span class="habilidade">HTML/CSS</span>
+                            <span class="habilidade">JavaScript</span>
+                            <span class="habilidade">Design UI/UX</span>
+                            <span class="habilidade">Comunicação</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="carreira-imagem">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Equipe trabalhando">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="agradecimentos" class="agradecimentos">
+        <div class="container">
+            <h2>Agradecimentos</h2>
+            <div class="agradecimentos-content">
+                <div class="mensagem">
+                    <p>Chegamos ao final de mais um ano letivo, repleto de desafios, aprendizados e conquistas. Gostaríamos de expressar nossa gratidão a todos que fizeram parte desta jornada:</p>
+                    
+                    <ul>
+                        <li>Aos professores, pelo conhecimento compartilhado e pela paciência em nos guiar;</li>
+                        <li>Aos colegas de turma, pela colaboração e pelo apoio mútuo;</li>
+                        <li>Aos familiares, pelo incentivo constante;</li>
+                        <li>E a todos que, de alguma forma, contribuíram para nosso crescimento.</li>
+                    </ul>
+                    
+                    <p class="destaque">É isso aí pessoal! Chegamos ao fim do ano!!!!!!!!!!!!!!!!!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Portfólio de Produções - Português e Redação | Ano Letivo</p>
+            <p>Desenvolvido com dedicação para celebrar nosso aprendizado</p>
+        </div>
+    </footer>
+
+    <!-- Modal para as produções -->
+    <div id="modal-producao" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

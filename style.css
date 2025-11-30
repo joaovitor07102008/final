@@ -1,0 +1,809 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --text-light: #777;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Merriweather', serif;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 10px auto;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+    color: white;
+}
+
+header p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+}
+
+nav a {
+    transition: var(--transition);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 8px;
+    top: 100%;
+    right: 0;
+    margin-top: 10px;
+    padding: 10px 0;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    transition: var(--transition);
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: var(--secondary-color);
+    padding-left: 25px;
+}
+
+.dropdown-content i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: var(--transition);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 8rem 0;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.hero h2::after {
+    background-color: white;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.cta-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Sobre Section */
+.sobre {
+    padding: 5rem 0;
+    background-color: white;
+}
+
+.sobre-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.sobre-texto p {
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* Produções Section */
+.producoes {
+    padding: 5rem 0;
+    background-color: #f5f7fa;
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.producoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.producao-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.producao-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.producao-imagem {
+    height: 200px;
+    overflow: hidden;
+}
+
+.producao-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.producao-card:hover .producao-imagem img {
+    transform: scale(1.05);
+}
+
+.producao-info {
+    padding: 1.5rem;
+}
+
+.producao-categoria {
+    display: inline-block;
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.producao-titulo {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.producao-descricao {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.producao-btn {
+    background-color: transparent;
+    color: var(--secondary-color);
+    font-weight: 500;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.producao-btn:hover {
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+/* Anime Section */
+.anime {
+    padding: 5rem 0;
+    background-color: white;
+}
+
+.anime-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.anime-info h3 {
+    color: var(--accent-color);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.anime-texto {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.anime-texto p {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.anime-media {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.media-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TÍTULO DA IMAGEM - acima da imagem */
+.image-title {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding: 12px;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.anime-image {
+    width: 100%;
+    height: 500px;
+}
+
+.anime-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+/* TÍTULO DO VÍDEO - acima do vídeo */
+.video-title {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding: 12px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.video-wrapper {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: #000;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-note {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    text-align: center;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Carreira Section */
+.carreira {
+    padding: 5rem 0;
+    background-color: #f5f7fa;
+}
+
+.carreira-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.carreira-texto ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.carreira-texto li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.carreira-texto li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.habilidades {
+    margin-top: 2rem;
+}
+
+.habilidades-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.habilidade {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.carreira-imagem img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* Agradecimentos Section */
+.agradecimentos {
+    padding: 5rem 0;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.agradecimentos h2 {
+    color: white;
+}
+
+.agradecimentos h2::after {
+    background-color: white;
+}
+
+.agradecimentos-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.agradecimentos ul {
+    margin: 1.5rem 0;
+}
+
+.agradecimentos li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.agradecimentos li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.destaque {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 2rem 0;
+    color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    position: relative;
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from {opacity: 0; transform: translateY(-50px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-modal:hover {
+    color: var(--accent-color);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-imagem {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.modal-titulo {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.modal-categoria {
+    display: inline-block;
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.modal-descricao {
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.modal-texto {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.modal-texto p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .sobre-content, .carreira-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .sobre-imagem, .carreira-imagem {
+        order: -1;
+    }
+    
+    .sobre-imagem img {
+        height: 350px;
+    }
+    
+    .carreira-imagem img {
+        height: 350px;
+    }
+    
+    .anime-media {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .anime-image {
+        height: 400px;
+    }
+    
+    .video-wrapper {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+    
+    .hero {
+        padding: 5rem 0;
+    }
+    
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        padding: 1rem 0;
+        text-align: center;
+        box-shadow: var(--shadow);
+    }
+    
+    nav ul.active {
+        display: flex;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background-color: transparent;
+        width: 100%;
+    }
+    
+    .dropdown-content a {
+        color: white;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        justify-content: center;
+    }
+    
+    .sobre-imagem img {
+        height: 300px;
+    }
+    
+    .carreira-imagem img {
+        height: 300px;
+    }
+    
+    .anime-image {
+        height: 350px;
+    }
+    
+    .video-wrapper {
+        height: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 95%;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .producoes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sobre-imagem img {
+        height: 250px;
+    }
+    
+    .carreira-imagem img {
+        height: 250px;
+    }
+    
+    .anime-image {
+        height: 300px;
+    }
+    
+    .video-wrapper {
+        height: 300px;
+    }
+    
+    .image-title, .video-title {
+        font-size: 1.1rem;
+    }
+}
